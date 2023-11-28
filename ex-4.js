@@ -82,3 +82,16 @@ let orders = [
 ];
 
 // Start coding here
+
+let highestPrice = 0;
+let highestPriceProduct;
+function findHighestPrice(){
+for (let i = 0; i < orders.length; i++) {
+  if (highestPrice < orders[i].productPrice) {
+    highestPrice = orders[i].productPrice;
+    highestPriceProduct = orders[i].productName; // Update the product name
+  }
+}
+}
+findHighestPrice()
+console.log(highestPriceProduct)

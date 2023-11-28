@@ -82,3 +82,23 @@ let orders = [
 ];
 
 // Start coding here
+// let highestTotalAmount=0;
+// for(let i=0 ; i<orders.length ; i++){
+//   if(highestTotalAmount<orders[i].productPrice*orders[i].productQuantity){
+//     highestTotalAmount =  `The most expensive order is order id ${orders[i].id} (${orders[i].productPrice*orders[i].productQuantity} Baht)`;
+//   }
+// }
+// console.log(highestTotalAmount)
+
+let highestTotalAmount=0;
+let theMostExpensiveOrders;
+let orderId;
+for(let i=0 ; i<orders.length ; i++){
+  let currentAmount = orders[i].productPrice*orders[i].productQuantity;
+  if(highestTotalAmount<currentAmount){
+    highestTotalAmount=currentAmount
+    orderId=orders[i].id
+  }
+  theMostExpensiveOrders=`The most expensive order is order id ${orderId} (${highestTotalAmount} Baht)`
+}
+console.log(theMostExpensiveOrders)
